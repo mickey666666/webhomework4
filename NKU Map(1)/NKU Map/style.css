@@ -1,0 +1,1169 @@
+/* 全局样式重置 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 南开大学品牌色 */
+  --nk-blue: #1a5397;
+  --nk-blue-light: #3b82f6;
+  --nk-blue-dark: #0f3460;
+  --nk-gray: #f5f7fa;
+  --nk-gray-dark: #4b5563;
+  --nk-white: #ffffff;
+  --nk-accent: #ffc107;
+
+  /* 通用变量 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  background-color: var(--nk-gray);
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 板块通用样式 */
+.section {
+  display: none;
+  padding: 60px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.section.active {
+  display: block;
+}
+
+/* 导航栏样式 */
+.header {
+  background-color: var(--nk-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--nk-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--nk-gray-dark);
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--nk-blue);
+}
+
+.nav-link.active {
+  color: var(--nk-blue);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--nk-blue);
+  border-radius: 3px;
+}
+
+/* 英雄区域样式 */
+.hero {
+  background: linear-gradient(135deg, var(--nk-blue-dark), var(--nk-blue));
+  color: var(--nk-white);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/nk-background.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: var(--nk-accent);
+  color: var(--nk-blue-dark);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background-color: #e6a800;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--nk-white);
+  color: var(--nk-white);
+  margin-left: 20px;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 特色板块样式 */
+.features {
+  padding: 80px 0;
+  background-color: var(--nk-white);
+}
+
+.section-title {
+  font-size: 36px;
+  color: var(--nk-blue-dark);
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--nk-accent);
+  border-radius: 2px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background-color: var(--nk-white);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-align: center;
+  border-top: 4px solid var(--nk-blue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  font-size: 48px;
+  color: var(--nk-blue);
+  margin-bottom: 24px;
+}
+
+.feature-title {
+  font-size: 22px;
+  color: var(--nk-blue-dark);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.feature-desc {
+  color: var(--nk-gray-dark);
+  font-size: 15px;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* 快速链接样式 */
+.feature-link {
+  display: inline-block;
+  color: var(--nk-blue);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.feature-link:hover {
+  color: var(--nk-blue-dark);
+  transform: translateX(5px);
+}
+
+.feature-link i {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* 学校介绍页面样式 */
+.about-section {
+  background-color: var(--nk-white);
+  padding: 80px 0;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-tagline {
+  font-size: 18px;
+  color: var(--nk-gray-dark);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* 每个区块样式 */
+.about-section-block {
+  background-color: var(--nk-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: var(--transition);
+}
+
+.about-section-block:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* 区块标题栏 */
+.about-section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--nk-blue-light);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.about-section-title {
+  font-size: 26px;
+  color: var(--nk-blue-dark);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* 内容行布局 */
+.about-content-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-image-column {
+  flex: 1;
+}
+
+.about-text-column {
+  flex: 1.5;
+}
+
+/* 图片画廊 */
+.about-image-gallery {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.thumbnail {
+  flex: 1;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* 高亮项 */
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f0f7ff;
+  color: var(--nk-blue);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.highlight-item i {
+  font-size: 12px;
+}
+
+/* 时间线样式（完全匹配你提供的截图） */
+.timeline {
+  position: relative;
+  padding-left: 140px;
+  /* 预留日期+竖线区域 */
+  margin: 0;
+  width: 100%;
+}
+
+/* 时间线竖线（左对齐，与日期块右侧贴合） */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 80px;
+  /* 竖线位于日期块右侧 */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--nk-blue-light);
+  z-index: 1;
+}
+
+/* 时间线项：日期+内容 */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 日期块：左靠，覆盖竖线 */
+.timeline-date {
+  position: absolute;
+  left: -140px;
+  /* 左移到timeline的padding区域 */
+  top: 0;
+  width: 120px;
+  /* 足够宽的日期区域 */
+  text-align: left;
+  /* 左对齐文字 */
+  background-color: var(--nk-blue);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 2;
+  /* 覆盖竖线 */
+  box-sizing: border-box;
+}
+
+/* 内容区：右靠，无遮挡 */
+.timeline-content {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.timeline-content h4 {
+  color: var(--nk-blue-dark);
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  color: var(--nk-gray-dark);
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 学科卡片样式 */
+.disciplines-content {
+  margin-bottom: 30px;
+}
+
+.disciplines-intro {
+  margin-bottom: 30px;
+}
+
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.discipline-card {
+  background-color: #f8f9fa;
+  border-radius: var(--radius-md);
+  padding: 25px;
+  transition: var(--transition);
+  border-left: 4px solid var(--nk-blue-light);
+}
+
+.discipline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+  background-color: white;
+}
+
+.discipline-icon {
+  font-size: 32px;
+  color: var(--nk-blue);
+  margin-bottom: 15px;
+}
+
+.discipline-title {
+  font-size: 18px;
+  color: var(--nk-blue-dark);
+  margin-bottom: 10px;
+}
+
+.discipline-desc {
+  font-size: 14px;
+  color: var(--nk-gray-dark);
+  line-height: 1.6;
+}
+
+/* 校园文化样式 */
+.culture-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.culture-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.culture-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.culture-icon {
+  font-size: 36px;
+  color: var(--nk-blue);
+  margin-top: 5px;
+}
+
+.culture-title {
+  font-size: 18px;
+  color: var(--nk-blue-dark);
+  margin-bottom: 8px;
+}
+
+.culture-desc {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.culture-explainer {
+  font-size: 14px;
+  color: var(--nk-gray-dark);
+  line-height: 1.6;
+}
+
+/* 校园设施样式 */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.facility-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  background-color: white;
+}
+
+.facility-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.facility-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.facility-card:hover .facility-image {
+  transform: scale(1.05);
+}
+
+.facility-title {
+  font-size: 18px;
+  color: var(--nk-blue-dark);
+  padding: 15px 20px 5px;
+  margin-bottom: 5px;
+}
+
+.facility-desc {
+  font-size: 14px;
+  color: var(--nk-gray-dark);
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* 数据统计样式 */
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background-color: var(--nk-blue-light);
+  color: var(--nk-white);
+  padding: 25px 15px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transform: translateX(-100%);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background-color: var(--nk-blue);
+}
+
+.stat-card:hover::before {
+  transform: translateX(100%);
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 杰出校友样式 */
+.alumni-slider {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--nk-blue-light) transparent;
+}
+
+.alumni-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.alumni-slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.alumni-slider::-webkit-scrollbar-thumb {
+  background-color: var(--nk-blue-light);
+  border-radius: 3px;
+}
+
+.alumni-item {
+  flex: 0 0 280px;
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.alumni-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.alumni-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid var(--nk-blue-light);
+}
+
+.alumni-name {
+  font-size: 18px;
+  color: var(--nk-blue-dark);
+  margin-bottom: 5px;
+}
+
+.alumni-title {
+  font-size: 14px;
+  color: var(--nk-gray-dark);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.alumni-desc {
+  font-size: 13px;
+  color: var(--nk-gray-dark);
+  line-height: 1.6;
+}
+
+/* 地图页面样式 */
+.page {
+  max-width: 1200px;
+  margin: 24px auto 40px;
+  padding: 0 16px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: var(--nk-blue-dark);
+}
+
+.page-header p {
+  font-size: 16px;
+  color: var(--nk-gray-dark);
+}
+
+.layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* 左侧地图 */
+.map-panel {
+  flex: 2;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e0e7ff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.campus-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 建筑热点样式 */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  outline: 2px dashed red;
+  background: rgba(255, 0, 0, 0.15);
+  cursor: move;
+}
+
+/* 高亮外观效果 */
+.hotspot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(255, 241, 118, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition:
+    opacity 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    background 0.15s ease-out,
+    transform 0.15s ease-out,
+    border-color 0.15s ease-out;
+}
+
+/* 鼠标滑过效果 */
+.hotspot:hover::before {
+  opacity: 1;
+  background: rgba(255, 241, 118, 0.75);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 18px rgba(255, 235, 59, 0.95);
+  transform: translate3d(0, -2px, 0) scale(1.03);
+}
+
+/* 点击锁定效果 */
+.hotspot.active::before {
+  opacity: 1;
+  background: rgba(59, 130, 246, 0.55);
+  border-color: rgba(37, 99, 235, 1);
+  box-shadow: 0 0 22px rgba(37, 99, 235, 0.98);
+  transform: translate3d(0, -2px, 0) scale(1.05);
+}
+
+/* 拖拽调试模式样式 */
+.hotspot.dragging {
+  outline: 2px solid #2563eb;
+  background: rgba(59, 130, 246, 0.25);
+  z-index: 10;
+}
+
+/* 右侧信息栏 */
+.info-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-box {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+  min-height: 200px;
+}
+
+.info-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--nk-blue-dark);
+}
+
+/* 图片容器样式 */
+.info-image-container {
+  margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 图片样式 */
+.info-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.info-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+.hint-box {
+  background: #eef2ff;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.hint-box ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.hint-box li+li {
+  margin-top: 4px;
+}
+
+/* 页脚样式 */
+.footer {
+  background-color: var(--nk-blue-dark);
+  color: var(--nk-white);
+  padding: 60px 0 24px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo-img {
+  height: 60px;
+  margin-bottom: 16px;
+}
+
+.footer-slogan {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-link-group h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--nk-accent);
+  display: inline-block;
+}
+
+.footer-link-group ul {
+  list-style: none;
+}
+
+.footer-link-group li {
+  margin-bottom: 8px;
+}
+
+.footer-link-group a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-link-group a:hover {
+  color: var(--nk-accent);
+  margin-left: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* 响应式样式 */
+@media (max-width: 992px) {
+  .about-content-row {
+    flex-direction: column;
+  }
+
+  .about-image-column,
+  .about-text-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .info-panel {
+    width: 100%;
+  }
+
+  /* 响应式时间线 */
+  .timeline {
+    padding-left: 120px;
+  }
+
+  .timeline::before {
+    left: 70px;
+  }
+
+  .timeline-date {
+    left: -120px;
+    width: 100px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    margin-top: 16px;
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    margin-bottom: 16px;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .about-section-title {
+    font-size: 22px;
+  }
+
+  /* 响应式时间线 */
+  .timeline {
+    padding-left: 100px;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline-date {
+    left: -100px;
+    width: 90px;
+    font-size: 12px;
+  }
+
+  .timeline-content {
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .features {
+    padding: 40px 0;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .about-section-block {
+    padding: 20px;
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alumni-item {
+    flex: 0 0 240px;
+  }
+
+  /* 移动端时间线 */
+  .timeline {
+    padding-left: 90px;
+  }
+
+  .timeline::before {
+    left: 50px;
+  }
+
+  .timeline-date {
+    left: -90px;
+    width: 80px;
+    font-size: 11px;
+  }
+
+  .timeline-content {
+    padding: 10px 15px;
+  }
+
+  .timeline-content h4 {
+    font-size: 14px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>南开大学服务网</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- 引入图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">
+          <img src="assets/nk-logo.png" alt="南开大学Logo" class="logo-img" />
+          <span class="logo-text">南开大学服务网</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active" data-section="home">首页</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">学校介绍</a></li>
+          <li><a href="#map" class="nav-link" data-section="map">校园地图</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首页板块 -->
+  <section id="home" class="section home-section active">
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">南开大学</h1>
+          <p class="hero-subtitle">允公允能，日新月异 | 致力于培养具有国际视野和社会责任感的高素质人才</p>
+          <div class="hero-buttons">
+            <a href="#about" class="btn" data-section="about">了解南开</a>
+            <a href="#map" class="btn btn-outline" data-section="map">校园地图</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="container">
+        <h2 class="section-title">服务导航</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="feature-title">学校概况</h3>
+            <p class="feature-desc">了解南开大学的历史沿革、办学理念、学科设置和校园文化</p>
+            <a href="#about-overview" class="feature-link" data-section="about">查看详情 <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3 class="feature-title">校园地图</h3>
+            <p class="feature-desc">交互式校园地图，快速定位建筑位置，查看详细介绍</p>
+            <a href="#map" class="feature-link" data-section="map">立即查看 <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="feature-title">教学服务</h3>
+            <p class="feature-desc">课程查询、成绩查询、教学资源、学术活动等教学相关服务</p>
+            <a href="https://jwc.nankai.edu.cn" target="_blank" class="feature-link">官方平台 <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="feature-title">生活服务</h3>
+            <p class="feature-desc">宿舍管理、餐饮服务、校园交通、医疗健康等生活配套服务</p>
+            <a href="https://xsc.nankai.edu.cn" target="_blank" class="feature-link">服务中心 <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学校介绍板块（全面优化） -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-header">
+        <h2 class="section-title">南开大学介绍</h2>
+        <p class="about-tagline">百年南开，薪火相传 | 中国近代教育史上的璀璨明珠</p>
+      </div>
+
+      <!-- 学校概况（移除左侧框框） -->
+      <div id="about-overview" class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3 class="about-section-title">学校概况</h3>
+        </div>
+        <div class="about-content-row">
+          <div class="about-image-column">
+            <div class="about-image-gallery">
+              <img src="assets/nk-campus-main.jpg" alt="南开大学卫津路校区" class="main-image" />
+              <div class="thumbnail-images">
+                <img src="assets/nk-jinnan.jpg" alt="津南校区" class="thumbnail" />
+                <img src="assets/nk-taida.jpg" alt="泰达校区" class="thumbnail" />
+                <img src="assets/nk-library.jpg" alt="南开大学图书馆" class="thumbnail" />
+              </div>
+            </div>
+          </div>
+          <div class="about-text-column">
+            <p class="about-paragraph">南开大学（Nankai
+              University），简称“南开”，始建于1919年，是由著名爱国教育家严修、张伯苓秉承教育救国理念创办的综合性大学。学校是国家“211工程”和“985工程”重点建设高校，也是国家“双一流”建设高校（A类）。
+            </p>
+            <p class="about-paragraph">
+              南开大学设有卫津路校区、津南校区、泰达校区三个校区，占地面积443.12万平方米，建筑面积195.09万平方米。学校始终坚持“允公允能，日新月异”的校训，形成了“爱国、敬业、创新、乐群”的光荣传统和“文以治国、理以强国、商以富国”的办学理念。
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>教育部直属全国重点大学</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>国家“双一流”建设高校（A类）</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>985工程、211工程重点建设高校</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-check-circle"></i>
+                <span>中国高等教育学会副会长单位</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 历史沿革（修复错位） -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3 class="about-section-title">历史沿革</h3>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">1919年</div>
+            <div class="timeline-content">
+              <h4>南开大学正式成立</h4>
+              <p>由严修、张伯苓创办，设文、理、商三科，周恩来为第一期学生</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">1937年</div>
+            <div class="timeline-content">
+              <h4>南迁昆明</h4>
+              <p>抗日战争爆发，南开大学与北京大学、清华大学南迁昆明，组成西南联合大学</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">1946年</div>
+            <div class="timeline-content">
+              <h4>迁回天津</h4>
+              <p>抗战胜利后，南开大学迁回天津原址复校</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">1952年</div>
+            <div class="timeline-content">
+              <h4>院系调整</h4>
+              <p>成为文理并重的综合性大学，奠定了今日学科布局的基础</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">1995年</div>
+            <div class="timeline-content">
+              <h4>进入211工程</h4>
+              <p>被列入国家“211工程”重点建设高校名单</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">2000年</div>
+            <div class="timeline-content">
+              <h4>进入985工程</h4>
+              <p>成为国家“985工程”重点建设高校</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">2015年</div>
+            <div class="timeline-content">
+              <h4>津南校区启用</h4>
+              <p>津南新校区正式启用，成为学校发展的新引擎</p>
+            </div>
+          </div>
+          <div class="timeline-item clearfix">
+            <div class="timeline-date">2017年</div>
+            <div class="timeline-content">
+              <h4>入选双一流</h4>
+              <p>入选国家“双一流”建设高校（A类）名单</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 学科实力 -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3 class="about-section-title">学科实力</h3>
+        </div>
+        <div class="disciplines-content">
+          <div class="disciplines-intro">
+            <p class="about-paragraph">
+              南开大学学科门类齐全，涵盖文、史、哲、经、管、法、理、工、农、医、教、艺等12个学科门类。学校现有26个学院，3个直属系，100个本科专业，硕士点117个，博士点98个，博士后科研流动站28个。</p>
+            <p class="about-paragraph">
+              在全国第四轮学科评估中，南开大学有5个学科进入A类，14个学科进入B类，多个学科在国内外享有盛誉。学校在理论经济学、应用经济学、数学、化学、统计学、历史学、中国语言文学、哲学、物理学等领域具有深厚的学术积淀和较强的科研实力。
+            </p>
+          </div>
+          <div class="disciplines-grid">
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4 class="discipline-title">经济学类</h4>
+              <p class="discipline-desc">理论经济学、应用经济学为国家重点学科，在全国处于领先地位</p>
+            </div>
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-atom"></i>
+              </div>
+              <h4 class="discipline-title">理学类</h4>
+              <p class="discipline-desc">数学、化学、物理学、生物学等学科实力雄厚，科研成果丰硕</p>
+            </div>
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h4 class="discipline-title">人文社科类</h4>
+              <p class="discipline-desc">历史学、中国语言文学、哲学等学科具有深厚的学术传统</p>
+            </div>
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h4 class="discipline-title">工学类</h4>
+              <p class="discipline-desc">计算机科学与技术、环境科学与工程、材料科学与工程等发展迅速</p>
+            </div>
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <h4 class="discipline-title">管理学类</h4>
+              <p class="discipline-desc">工商管理、公共管理、图书情报与档案管理等学科特色鲜明</p>
+            </div>
+            <div class="discipline-card">
+              <div class="discipline-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h4 class="discipline-title">法学类</h4>
+              <p class="discipline-desc">法学、政治学、社会学等学科在国内外具有重要影响</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 校园文化 -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="about-section-title">校园文化</h3>
+        </div>
+        <div class="culture-content">
+          <div class="culture-item">
+            <div class="culture-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <div class="culture-info">
+              <h4 class="culture-title">校训精神</h4>
+              <p class="culture-desc"><strong>允公允能，日新月异</strong></p>
+              <p class="culture-explainer">允公：大公无私，爱国奉献；允能：培养能力，服务社会；日新月异：与时俱进，开拓创新</p>
+            </div>
+          </div>
+          <div class="culture-item">
+            <div class="culture-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="culture-info">
+              <h4 class="culture-title">南开精神</h4>
+              <p class="culture-desc"><strong>爱国、敬业、创新、乐群</strong></p>
+              <p class="culture-explainer">爱国是南开精神的核心，敬业是南开人的职业操守，创新是南开发展的动力，乐群是南开人的处世之道</p>
+            </div>
+          </div>
+          <div class="culture-item">
+            <div class="culture-icon">
+              <i class="fas fa-theater-masks"></i>
+            </div>
+            <div class="culture-info">
+              <h4 class="culture-title">校园活动</h4>
+              <p class="culture-desc">“南开之春”文化艺术节、“挑战杯”大学生课外学术科技作品竞赛、“校长杯”体育比赛等</p>
+              <p class="culture-explainer">学校拥有200多个学生社团，涵盖学术科技、文化艺术、体育健身、公益服务等多个领域</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 校园设施 -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="about-section-title">校园设施</h3>
+        </div>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <img src="assets/facility-library.jpg" alt="图书馆" class="facility-image" />
+            <h4 class="facility-title">图书馆</h4>
+            <p class="facility-desc">总建筑面积达7.8万平方米，藏书400余万册，拥有丰富的电子资源和古籍文献</p>
+          </div>
+          <div class="facility-card">
+            <img src="assets/facility-lab.jpg" alt="实验室" class="facility-image" />
+            <h4 class="facility-title">实验室</h4>
+            <p class="facility-desc">拥有国家重点实验室4个，省部级重点实验室30余个，科研设备先进齐全</p>
+          </div>
+          <div class="facility-card">
+            <img src="assets/facility-sports.jpg" alt="体育场馆" class="facility-image" />
+            <h4 class="facility-title">体育场馆</h4>
+            <p class="facility-desc">建有体育馆、游泳馆、足球场、篮球场、网球场等各类体育设施，满足师生健身需求</p>
+          </div>
+          <div class="facility-card">
+            <img src="assets/facility-dorm.jpg" alt="学生宿舍" class="facility-image" />
+            <h4 class="facility-title">学生宿舍</h4>
+            <p class="facility-desc">标准化学生公寓，配备空调、独立卫浴、24小时热水，环境舒适安全</p>
+          </div>
+          <div class="facility-card">
+            <img src="assets/facility-canteen.jpg" alt="学生食堂" class="facility-image" />
+            <h4 class="facility-title">学生食堂</h4>
+            <p class="facility-desc">多个学生食堂，提供全国各地风味美食，满足不同口味需求</p>
+          </div>
+          <div class="facility-card">
+            <img src="assets/facility-medical.jpg" alt="校医院" class="facility-image" />
+            <h4 class="facility-title">校医院</h4>
+            <p class="facility-desc">综合性校医院，提供日常医疗、健康体检、预防保健等服务</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 数据统计 -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3 class="about-section-title">南开数据</h3>
+        </div>
+        <div class="statistics-grid">
+          <div class="stat-card">
+            <div class="stat-number">1919</div>
+            <div class="stat-label">建校年份</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">校区数量</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">26</div>
+            <div class="stat-label">学院数量</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">本科专业</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">40k+</div>
+            <div class="stat-label">在校师生</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">28</div>
+            <div class="stat-label">博士后流动站</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">98</div>
+            <div class="stat-label">博士点</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">117</div>
+            <div class="stat-label">硕士点</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">400万+</div>
+            <div class="stat-label">图书馆藏书</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">年度科研项目</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">学生社团</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">95%+</div>
+            <div class="stat-label">毕业生就业率</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 杰出校友 -->
+      <div class="about-section-block">
+        <div class="about-section-header">
+          <div class="section-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="about-section-title">杰出校友</h3>
+        </div>
+        <div class="alumni-slider">
+          <div class="alumni-item">
+            <img src="assets/alumni-zhouenlai.jpg" alt="周恩来" class="alumni-photo" />
+            <h4 class="alumni-name">周恩来</h4>
+            <p class="alumni-title">无产阶级革命家、政治家、军事家、外交家</p>
+            <p class="alumni-desc">南开大学第一期学生，中国共产党和中华人民共和国的主要领导人之一</p>
+          </div>
+          <div class="alumni-item">
+            <img src="assets/alumni-yuquanfu.jpg" alt="于敏" class="alumni-photo" />
+            <h4 class="alumni-name">于敏</h4>
+            <p class="alumni-title">核物理学家、“两弹一星”功勋科学家</p>
+            <p class="alumni-desc">中国氢弹之父，国家最高科学技术奖获得者</p>
+          </div>
+          <div class="alumni-item">
+            <img src="assets/alumni-wangxuan.jpg" alt="王选" class="alumni-photo" />
+            <h4 class="alumni-name">王选</h4>
+            <p class="alumni-title">计算机文字信息处理专家</p>
+            <p class="alumni-desc">汉字激光照排系统创始人，国家最高科学技术奖获得者</p>
+          </div>
+          <div class="alumni-item">
+            <img src="assets/alumni-chenjingrun.jpg" alt="陈景润" class="alumni-photo" />
+            <h4 class="alumni-name">陈景润</h4>
+            <p class="alumni-title">数学家</p>
+            <p class="alumni-desc">在哥德巴赫猜想研究中取得重大突破，被誉为“数学王子”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 校园地图板块（保持不变） -->
+  <section id="map" class="section map-section">
+    <div class="container">
+      <div class="page">
+        <header class="page-header">
+          <h1>南开大学交互地图</h1>
+          <p>鼠标滑过某栋建筑会发光浮起，点击后高亮锁定并显示对应介绍，按 Esc 取消选择。</p>
+        </header>
+
+        <main class="layout">
+          <!-- 左侧地图 -->
+          <section class="map-panel">
+            <div class="map-container">
+              <img src="assets/nk-map.jpg" alt="南开大学手绘地图" class="campus-map" />
+              <!-- 建筑热点由 script.js 动态生成 -->
+            </div>
+          </section>
+
+          <!-- 右侧信息栏 -->
+          <aside class="info-panel">
+            <div class="info-box">
+              <h2 class="info-title" id="info-title">操作提示</h2>
+              <!-- 图片容器：默认隐藏，有图片时显示 -->
+              <div class="info-image-container" id="info-image-container" style="display: none;"></div>
+              <p class="info-body" id="info-body">
+                鼠标移动到地图上某栋建筑区域，会看到该建筑发光浮起；
+                点击后高亮会一直存在，并在右侧显示对应文字介绍。
+                按 Esc 取消当前选择。
+              </p>
+            </div>
+
+            <div class="hint-box">
+              <p>操作说明：</p>
+              <ul>
+                <li>🖱️ 滑过建筑：黄色高亮 + 浮起效果 + 提示音</li>
+                <li>🖱️ 左键点击：蓝色高亮锁定 + 文字介绍+图片</li>
+                <li>⎋ Esc：取消高亮，恢复默认提示</li>
+              </ul>
+            </div>
+          </aside>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/nk-logo-white.png" alt="南开大学Logo" class="footer-logo-img" />
+          <p class="footer-slogan">允公允能，日新月异</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-link-group">
+            <h4>快速链接</h4>
+            <ul>
+              <li><a href="#home" data-section="home">首页</a></li>
+              <li><a href="#about" data-section="about">学校介绍</a></li>
+              <li><a href="#map" data-section="map">校园地图</a></li>
+            </ul>
+          </div>
+          <div class="footer-link-group">
+            <h4>官方平台</h4>
+            <ul>
+              <li><a href="https://www.nankai.edu.cn" target="_blank">南开大学官网</a></li>
+              <li><a href="https://jwc.nankai.edu.cn" target="_blank">教务处</a></li>
+              <li><a href="https://graduate.nankai.edu.cn" target="_blank">研究生院</a></li>
+              <li><a href="https://xsc.nankai.edu.cn" target="_blank">学生工作处</a></li>
+            </ul>
+          </div>
+          <div class="footer-link-group">
+            <h4>招生就业</h4>
+            <ul>
+              <li><a href="https://zsb.nankai.edu.cn" target="_blank">本科招生</a></li>
+              <li><a href="https://graduate.nankai.edu.cn" target="_blank">研究生招生</a></li>
+              <li><a href="https://job.nankai.edu.cn" target="_blank">就业指导中心</a></li>
+            </ul>
+          </div>
+          <div class="footer-link-group">
+            <h4>联系我们</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 天津市南开区卫津路94号</li>
+              <li><i class="fas fa-phone"></i> 022-23508219</li>
+              <li><i class="fas fa-envelope"></i> office@nankai.edu.cn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 南开大学 版权所有 | 津ICP备12345678号</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 音效 -->
+  <audio id="hover-sound" src="assets/hover.mp3" preload="auto"></audio>
+  <audio id="click-sound" src="assets/click.mp3" preload="auto"> ></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
