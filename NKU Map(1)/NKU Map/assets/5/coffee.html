@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .containter{
+            display:grid;
+            grid-template-areas:
+            "headerp headerp"
+            "header header"
+            "menu content"
+            "cooker content"
+            "footer footer";
+            grid-template-columns: 1fr 2fr;
+            gap: 5px;
+            width:900px;
+            margin: 0 auto;
+        }
+        
+        .headerp{
+            grid-area: headerp;
+            position: relative;
+            height: 220px;
+        }
+        .small{
+            position:absolute ;
+            bottom: 30px;
+            right: 125px;
+        }
+        .small1{
+            position:absolute ;
+            bottom: 30px;
+            right: 100px;
+        }
+        .small2{
+            position:absolute ;
+            bottom: 30px;
+            right: 75px;
+        }
+        .small3{
+            position:absolute ;
+            bottom: 30px;
+            right: 50px;
+        }
+        .header{
+            grid-area: header;
+            width: 900px;
+            height: 30px;
+            background-color: rgb(16, 147, 240);
+            text-align: center;
+            color: white;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .menu{
+            text-align: center;
+            grid-area: menu;
+            height: 600px;
+            background-color: rgb(124, 173, 250);
+            
+        }
+        .coffee-menu{
+            font-size: 15px;
+            
+
+        }
+        .menu img{
+            width:80px;
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            margin:0 auto;
+            padding: 7px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .img1{
+            transform: rotate(7deg);
+
+        }
+        .img2{
+            transform: rotate(-7deg);
+
+        }
+        .img3{
+            transform: rotate(7deg);
+
+        }
+        .img4{
+            transform: rotate(-7deg);
+
+        }
+        .content{
+            grid-area: content;
+            color: brown;
+            background-color: rgb(185, 218, 253);
+            
+        }
+        .coffee-item img{
+            width: 160px;
+            height: auto;
+            border: 3px dashed black;
+            padding: 5px;
+           
+        }
+        .coffee-item{
+            display: flex;
+            align-items:flex-start;
+            flex-wrap: nowrap;
+            padding: 9px;
+        }
+        .cooker{
+            background-color: aqua;
+            height: 245px;
+            text-align: center;
+
+        }
+        .cooker img{
+            width:150px;
+            height:auto;
+            margin: 0,auto;
+            border: 8px groove green;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .footer img{
+            width:900px;
+            height:auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="containter">
+        <div class="headerp">
+            <img src="banner.jpg" alt="wrong">
+            <img src="1.bmp" alt="wrong" class="small">
+            <img src="2.bmp" alt="wrong" class="small1">
+            <img src="3.bmp" alt="wrong" class="small2">
+            <img src="4.bmp" alt="wrong" class="small3">
+
+        </div>
+        <div class="header">
+            咖啡MENU|  咖啡COOK|  咖啡STORT|  咖啡NEWS|  咖啡PARTY
+            
+        </div>
+        <div class="menu">
+            <h2>咖啡MENU</h2>
+            
+            <table class="coffee-menu">
+                <thead>
+                    <tr>
+                        <th>种类</th>
+                            <th>拿铁<br>Latte</th>
+                                <th>卡布奇诺<br>Cappuccino</th>
+                                    <th>摩卡<br>Mocha</th>
+                                        <th>浓缩咖啡<br>Espresso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>大杯</td>
+                        <td>35</td>
+                        <td>35</td>
+                        <td>35</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>中杯</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>30</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>小杯</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img class="img1" src="Mocha.jpg" alt="wrong">
+            <img class="img2" src="Latte.jpg" alt="wrong">
+            <img class="img3" src="Espresso.jpg" alt="wrong">
+            <img class="img4" src="Cappuccino.jpg" alt="wrong">
+            
+
+        </div>
+        <div class="cooker">
+            <h2>
+                咖啡COOKER
+            </h2>
+            <img src="cooker.jpg" alt="cooker">
+        </div>
+        <div class="content">
+            <!-- 拿铁 -->
+            <div class="coffee-item">
+                    <img src="Latte.jpg" alt="拿铁">
+                    <div class="item-text">
+                        <h3> 拿铁Caffè Latte</h3>
+                        <p>这是一种传统的经典饮料——浓缩咖啡调入热牛奶，其上覆盖一层轻盈的奶沫。<br>品尝此款咖啡时，您可以选择特别加入某种口味（如香草，焦糖或杏仁口味）的糖浆。</p>
+                    </div>
+            </div>
+            <!-- 卡布奇诺 -->
+            <div class="coffee-item">
+                <img src="Cappuccino.jpg" alt="卡布奇诺">
+                    <div class="item-text">
+                        <h3> 卡布奇诺Cappuccino</h3>
+                        <p>这款咖啡沿袭传统技法，由我们技艺娴熟的咖啡吧员将手工制作的热奶与细腻奶泡轻柔地浇在浓缩咖啡之上制作而成。</p>
+                    </div>
+            </div>
+            <!-- 摩卡 -->
+            <div class="coffee-item">
+                <img src="Mocha.jpg" alt="摩卡">
+                    <div class="item-text">
+                        <h3> 摩卡Caffè Mocha</h3>
+                        <p>这款咖啡由醇香的摩卡酱，浓缩咖啡和蒸奶相融相合，上面覆以搅打奶油。<br>寒冷的日子里，忧伤的时光中,任何人都无法抵抗她的诱惑。</p>
+                    </div>
+            </div>
+            <!-- 浓缩咖啡 -->
+            <div class="coffee-item">
+                <img src="Espresso.jpg" alt="浓缩咖啡">
+                    <div class="item-text">
+                        <h3> 浓缩咖啡Espresso</h3>
+                        <p>这是咖啡的精粹，以最浓缩的方式显现。浓缩咖啡带点焦糖味道，浓厚馥郁。</p>
+                    </div>
+            </div>
+
+            
+
+        </div>
+        <div class="footer">
+            <img src="banner.gif" alt="banner">
+            
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
